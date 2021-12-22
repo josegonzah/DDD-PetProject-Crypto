@@ -13,4 +13,8 @@ public class NombreDeUsuarioCambiado extends DomainEvent {
         this.usuarioID = usuarioID;
         this.userName = userName;
     }
+
+    public UserName getUserName() {
+        return userName;
+    }
 }

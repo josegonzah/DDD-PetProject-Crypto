@@ -3,6 +3,9 @@ package co.com.sofka.Billetera;
 import co.com.sofka.Billetera.Values.*;
 import co.com.sofka.Billetera.events.*;
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
+
+import java.util.List;
 
 public class Billetera extends AggregateEvent<BilleteraID> {
     protected User user;
@@ -17,6 +20,12 @@ public class Billetera extends AggregateEvent<BilleteraID> {
     private Billetera(BilleteraID billeteraID){
         super(billeteraID);
         subscribe(new BilleteraChange(this));
+    }
+
+    public static Billetera from(BilleteraID billeteraID, List<DomainEvent> events){
+        var billetera = new Billetera(billeteraID);
+        events.forEach(billetera::applyEvent);
+        return billetera;
     }
 
     public void asociarUsuario(UsuarioID entityId, UserName userName, UserDescription userDescription, Value value){

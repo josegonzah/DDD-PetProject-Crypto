@@ -13,4 +13,8 @@ public class ValorDeUsuarioCambiado extends DomainEvent {
         this.usuarioID = usuarioID;
         this.value = value;
     }
+
+    public Value getValue() {
+        return value;
+    }
 }

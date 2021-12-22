@@ -1,23 +1,25 @@
-package co.com.sofka.Billetera.events;
+package co.com.sofka.Billetera.commands;
 
-import co.com.sofka.Billetera.Values.UserDescription;
-import co.com.sofka.Billetera.Values.UserName;
-import co.com.sofka.Billetera.Values.UsuarioID;
-import co.com.sofka.Billetera.Values.Value;
-import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.Billetera.Values.*;
+import co.com.sofka.domain.generic.Command;
 
-public class UsuarioAsociado extends DomainEvent {
+public class asociarUsuario extends Command {
+    private final BilleteraID billeteraID;
     private final UsuarioID usuarioID;
     private final UserName userName;
     private final UserDescription userDescription;
     private final Value value;
 
-    public UsuarioAsociado(UsuarioID usuarioID, UserName userName, UserDescription userDescription, Value value){
-        super("sofka.billetera.usuarioasociado");
+    public asociarUsuario(BilleteraID billeteraID, UsuarioID usuarioID, UserName userName, UserDescription userDescription, Value value) {
+        this.billeteraID = billeteraID;
         this.usuarioID = usuarioID;
         this.userName = userName;
         this.userDescription = userDescription;
         this.value = value;
+    }
+
+    public BilleteraID getBilleteraID() {
+        return billeteraID;
     }
 
     public UsuarioID getUsuarioID() {
@@ -35,4 +37,7 @@ public class UsuarioAsociado extends DomainEvent {
     public Value getValue() {
         return value;
     }
+
+
+
 }

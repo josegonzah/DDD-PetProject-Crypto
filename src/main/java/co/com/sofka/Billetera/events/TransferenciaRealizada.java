@@ -16,4 +16,16 @@ public class TransferenciaRealizada extends DomainEvent {
         this.value = value;
         this.llaves = llaves;
     }
+
+    public UsuarioID getUsuarioID() {
+        return usuarioID;
+    }
+
+    public Value getValue() {
+        return value;
+    }
+
+    public Llaves getLlaves() {
+        return llaves;
+    }
 }

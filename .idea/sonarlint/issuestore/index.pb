@@ -9,9 +9,5 @@ i
 9src/main/java/co/com/sofka/Transaccion/Nutricionista.java,f\c\fc65f9dab304cf534ca81163dd45ea2a40fa2532
 d
 4src/main/java/co/com/sofka/Transaccion/Personal.java,c\f\cf0d5bb7fccfc003ee2739dc595360a01f35a438
-l
-<src/main/java/co/com/sofka/Billetera/Values/BilleteraID.java,1\b\1bece89b698dc8f985f88c3c9d533b57a9af0ea6
-f
-6src/main/java/co/com/sofka/Billetera/Values/Value.java,e\0\e02f504c058cc9759768427ccd10d5df0ec089a8
-j
-:src/main/java/co/com/sofka/Billetera/Values/UsuarioID.java,5\b\5b51200a96abfbdf61eed2b5b52f5badbbb90677
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

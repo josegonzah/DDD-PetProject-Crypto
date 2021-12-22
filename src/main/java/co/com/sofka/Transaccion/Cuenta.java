@@ -1,4 +1,4 @@
 package co.com.sofka.Transaccion;
 
-public class Nutricionista {
+public class Cuenta {
 }
